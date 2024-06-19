@@ -1,0 +1,11 @@
+<?xml version="1.0" ?>
+<schema xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:framework:Setup/Declaration/Schema/etc/schema.xsd">
+    <table name="sales_order">
+        <column xsi:type="smallint" name="dropday_order_export_status" nullable="false" identity="false"
+                unsigned="false"
+                default="0" comment="Order Export Status"/>
+        <column xsi:type="datetime" name="dropday_order_export_created_at" on_update="false" nullable="true"
+                comment="Order Export Creation Time"/>
+    </table>
+</schema>

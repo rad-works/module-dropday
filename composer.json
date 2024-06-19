@@ -1,0 +1,21 @@
+{
+  "name": "dmi-rud/module-dropday",
+  "version": "0.1.0",
+  "description": "",
+  "type": "magento2-module",
+  "require": {
+    "dropday-io/module-orderautomation": "1.0.4",
+    "magento/module-sales": "*"
+  },
+  "license": [
+    "MIT"
+  ],
+  "autoload": {
+    "files": [
+      "registration.php"
+    ],
+    "psr-4": {
+      "DmiRud\\Dropday\\": ""
+    }
+  }
+}

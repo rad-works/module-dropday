@@ -1,0 +1,12 @@
+<?xml version="1.0" ?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:framework:Event/etc/events.xsd">
+    <event name="sales_order_place_after">
+        <!-- Disable Dropday_OrderAutomation observer -->
+        <observer name="dropday_order_place_after" disabled="true"/>
+    </event>
+    <event name="sales_order_save_before">
+        <observer name="DmiRud_Dropday::mark_order_for_export"
+                  instance="DmiRud\Dropday\Observer\UpdateOrderExportStatusObserver"/>
+    </event>
+</config>

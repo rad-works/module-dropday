@@ -1,0 +1,8 @@
+{
+    "sales_order": {
+        "column": {
+            "dropday_order_export_created_at": true,
+            "dropday_order_export_status": true
+        }
+    }
+}

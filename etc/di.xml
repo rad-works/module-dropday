@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+    <type name="Dropday\OrderAutomation\Helper\Data">
+        <plugin name="DmiRud_Dropday::modify_request_param_data"
+                type="DmiRud\Dropday\Plugin\Dropday\OrderAutomation\Helper\Data\ModifyRequestParamData"/>
+        <plugin name="DmiRud_Dropday::fix_deprecated_http_client_error"
+                type="DmiRud\Dropday\Plugin\Dropday\OrderAutomation\Helper\Data\FixDeprecatedHttpClientError"/>
+    </type>
+</config>

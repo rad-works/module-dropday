@@ -1,0 +1,40 @@
+<?xml version="1.0" ?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Config:etc/system_file.xsd">
+    <system>
+        <section id="dropday">
+            <group id="cron_export" sortOrder="100" showInDefault="1" translate="label">
+                <label>Cron Export Settings</label>
+                <field id="enabled" type="select" sortOrder="10" showInDefault="1" translate="label">
+                    <label>Enabled</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                    <config_path>DmiRud_dropday/order_export/enabled</config_path>
+                    <depends>
+                        <field id="*/order_automation/enabled">1</field>
+                    </depends>
+                </field>
+                <field id="delay" translate="label" type="text" sortOrder="20" showInDefault="1" canRestore="1">
+                    <label>Time Delay</label>
+                    <depends>
+                        <field id="enabled">1</field>
+                    </depends>
+                    <comment>
+                        <![CDATA[A minimum delay, in minutes, before an order is processed for export to the DropDay API.]]>
+                    </comment>
+                    <frontend_class>required-entry validate-digits validate-digits-range digits-range-0-9999
+                    </frontend_class>
+                    <config_path>DmiRud_dropday/order_export/delay</config_path>
+                </field>
+                <field id="rules" translate="label" sortOrder="30" showInDefault="1" canRestore="1">
+                    <label>Export Rules</label>
+                    <comment>
+                        <![CDATA[Orders compliant with these rules will be marked for the DropDay export.]]>
+                    </comment>
+                    <frontend_model>DmiRud\Dropday\Block\Adminhtml\Form\Field\ExportRules</frontend_model>
+                    <backend_model>Magento\Config\Model\Config\Backend\Serialized\ArraySerialized</backend_model>
+                    <config_path>DmiRud_dropday/order_export/rules</config_path>
+                </field>
+            </group>
+        </section>
+    </system>
+</config>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<listing xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Ui:etc/ui_configuration.xsd">
+    <listingToolbar name="listing_top">
+        <massaction name="listing_massaction">
+            <action name="dropday_order_export">
+                <settings>
+                    <url path="sales/order/dropdayExport"/>
+                    <type>dropday_order_export</type>
+                    <label translate="true">Dropday Export</label>
+                </settings>
+            </action>
+        </massaction>
+        <paging name="listing_paging"/>
+    </listingToolbar>
+    <columns name="sales_order_columns">
+        <column name="dropday_order_export_status"
+                class="DmiRud\Dropday\Ui\Component\Listing\Column\DropDayExport\Status" sortOrder="1000">
+            <settings>
+                <label translate="true">Dropday Export Status</label>
+                <visible>true</visible>
+                <filter>false</filter>
+                <sortable>false</sortable>
+            </settings>
+        </column>
+    </columns>
+</listing>
