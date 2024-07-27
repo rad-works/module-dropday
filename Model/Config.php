@@ -17,9 +17,9 @@ class Config
     /**
      * Path or of the config value
      */
-    private const XML_PATH_EXPORT_DELAY = 'DmiRud_dropday/order_export/delay';
-    private const XML_PATH_EXPORT_ENABLED = 'DmiRud_dropday/order_export/enabled';
-    private const XML_PATH_EXPORT_RULES = 'DmiRud_dropday/order_export/rules';
+    private const XML_PATH_EXPORT_DELAY = 'dmirud_dropday/order_export/delay';
+    private const XML_PATH_EXPORT_ENABLED = 'dmirud_dropday/order_export/enabled';
+    private const XML_PATH_EXPORT_RULES = 'dmirud_dropday/order_export/rules';
 
     /**
      * Order table  additional fields

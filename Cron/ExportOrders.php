@@ -16,8 +16,7 @@ class ExportOrders
         private readonly Config          $config,
         private readonly OrderService    $orderService,
         private readonly LoggerInterface $logger
-    )
-    {
+    ) {
     }
 
     /**

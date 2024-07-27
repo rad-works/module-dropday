@@ -2,21 +2,21 @@
 <config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
         xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Store:etc/config.xsd">
     <default>
-        <DmiRud_dropday>
+        <dmirud_dropday>
             <order_export>
                 <delay><![CDATA[25]]></delay>
                 <enabled><![CDATA[1]]></enabled>
                 <rules><![CDATA[{"_1710067196679_679":{"payment_method":"stripe_payments","order_status":["processing_processing"]},"_1710067214375_375":{"payment_method":"purchaseorder","order_status":["new_pending"]}}]]></rules>
             </order_export>
-        </DmiRud_dropday>
+        </dmirud_dropday>
         <crontab>
             <default>
                 <jobs>
-                    <DmiRud_dropday_export_orders>
+                    <dmirud_dropday_export_orders>
                         <schedule>
                             <cron_expr><![CDATA[*/5 * * * *]]></cron_expr>
                         </schedule>
-                    </DmiRud_dropday_export_orders>
+                    </dmirud_dropday_export_orders>
                 </jobs>
             </default>
         </crontab>
