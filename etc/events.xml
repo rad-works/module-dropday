@@ -6,7 +6,7 @@
         <observer name="dropday_order_place_after" disabled="true"/>
     </event>
     <event name="sales_order_save_before">
-        <observer name="DmiRud_Dropday::mark_order_for_export"
-                  instance="DmiRud\Dropday\Observer\UpdateOrderExportStatusObserver"/>
+        <observer name="RadWorks_Dropday::mark_order_for_export"
+                  instance="RadWorks\Dropday\Observer\UpdateOrderExportStatusObserver"/>
     </event>
 </config>

@@ -1,7 +1,7 @@
 <?php
 declare(strict_types=1);
 
-namespace DmiRud\Dropday\Controller\Adminhtml\Order;
+namespace RadWorks\Dropday\Controller\Adminhtml\Order;
 
 use Magento\Backend\App\Action;
 use Magento\Backend\App\Action\Context;
@@ -12,8 +12,8 @@ use Magento\Framework\Exception\LocalizedException;
 use Magento\Sales\Api\Data\OrderInterface;
 use Magento\Sales\Model\ResourceModel\Order\CollectionFactory;
 use Magento\Ui\Component\MassAction\FilterFactory;
-use DmiRud\Dropday\Model\Config;
-use DmiRud\Dropday\Model\Export\OrderService;
+use RadWorks\Dropday\Model\Config;
+use RadWorks\Dropday\Model\Export\OrderService;
 
 /**
  * Exports order by calling Dropday API

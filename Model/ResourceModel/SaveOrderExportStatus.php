@@ -1,7 +1,7 @@
 <?php
 declare(strict_types=1);
 
-namespace DmiRud\Dropday\Model\ResourceModel;
+namespace RadWorks\Dropday\Model\ResourceModel;
 
 use Magento\Framework\App\ResourceConnection;
 use Magento\Sales\Api\Data\OrderInterface;

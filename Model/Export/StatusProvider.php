@@ -1,10 +1,10 @@
 <?php
 declare(strict_types=1);
 
-namespace DmiRud\Dropday\Model\Export;
+namespace RadWorks\Dropday\Model\Export;
 
 use Magento\Sales\Model\Order;
-use DmiRud\Dropday\Model\Config;
+use RadWorks\Dropday\Model\Config;
 
 /**
  * Provides export status based on order's data

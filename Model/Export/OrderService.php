@@ -1,7 +1,7 @@
 <?php
 declare(strict_types=1);
 
-namespace DmiRud\Dropday\Model\Export;
+namespace RadWorks\Dropday\Model\Export;
 
 use Magento\Framework\Api\SearchCriteriaBuilder;
 use Magento\Framework\Stdlib\DateTime;
@@ -9,9 +9,9 @@ use Magento\Sales\Api\Data\OrderInterface;
 use Magento\Sales\Api\Data\OrderSearchResultInterface;
 use Magento\Sales\Api\OrderRepositoryInterface;
 use Magento\Sales\Model\Order;
-use DmiRud\Dropday\Model\Config;
-use DmiRud\Dropday\Model\DropdayAdapter;
-use DmiRud\Dropday\Model\ResourceModel\SaveOrderExportStatus;
+use RadWorks\Dropday\Model\Config;
+use RadWorks\Dropday\Model\DropdayAdapter;
+use RadWorks\Dropday\Model\ResourceModel\SaveOrderExportStatus;
 
 class OrderService
 {

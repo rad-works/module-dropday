@@ -1,7 +1,7 @@
 <?php
 declare(strict_types=1);
 
-namespace DmiRud\Dropday\Model;
+namespace RadWorks\Dropday\Model;
 
 use Dropday\OrderAutomation\Helper\Data;
 use Magento\Framework\Serialize\Serializer\Json;

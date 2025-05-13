@@ -1,7 +1,7 @@
 <?php
 declare(strict_types=1);
 
-namespace DmiRud\Dropday\Plugin\Dropday\OrderAutomation\Helper\Data;
+namespace RadWorks\Dropday\Plugin\Dropday\OrderAutomation\Helper\Data;
 
 use Dropday\OrderAutomation\Helper\Data;
 use Magento\Catalog\Api\Data\ProductInterface;

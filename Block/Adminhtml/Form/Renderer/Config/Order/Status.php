@@ -1,12 +1,12 @@
 <?php
 declare(strict_types=1);
 
-namespace DmiRud\Dropday\Block\Adminhtml\Form\Renderer\Config\Order;
+namespace RadWorks\Dropday\Block\Adminhtml\Form\Renderer\Config\Order;
 
 use Magento\Framework\View\Element\Context;
 use Magento\Framework\View\Element\Html\Select;
 use Magento\Sales\Model\Order\Config as OrderConfig;
-use DmiRud\Dropday\Model\Config;
+use RadWorks\Dropday\Model\Config;
 
 /**
  * Provides list of all order statuses grouped by state

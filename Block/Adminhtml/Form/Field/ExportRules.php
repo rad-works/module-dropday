@@ -1,13 +1,13 @@
 <?php
 declare(strict_types=1);
 
-namespace DmiRud\Dropday\Block\Adminhtml\Form\Field;
+namespace RadWorks\Dropday\Block\Adminhtml\Form\Field;
 
 use Magento\Config\Block\System\Config\Form\Field\FieldArray\AbstractFieldArray;
 use Magento\Framework\DataObject;
 use Magento\Framework\View\Element\AbstractBlock;
-use DmiRud\Dropday\Block\Adminhtml\Form\Renderer\Config\Order\PaymentMethod;
-use DmiRud\Dropday\Block\Adminhtml\Form\Renderer\Config\Order\Status;
+use RadWorks\Dropday\Block\Adminhtml\Form\Renderer\Config\Order\PaymentMethod;
+use RadWorks\Dropday\Block\Adminhtml\Form\Renderer\Config\Order\Status;
 
 class ExportRules extends AbstractFieldArray
 {

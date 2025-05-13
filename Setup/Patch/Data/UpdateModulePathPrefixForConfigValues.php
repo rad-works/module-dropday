@@ -1,12 +1,12 @@
 <?php
 declare(strict_types=1);
 
-namespace DmiRud\Dropday\Setup\Patch\Data;
+namespace RadWorks\Dropday\Setup\Patch\Data;
 
 use Magento\Framework\Setup\ModuleDataSetupInterface;
 use Magento\Framework\Setup\Patch\DataPatchInterface;
 
-class UpdateModulePrefixInConfigPath implements DataPatchInterface
+class UpdateModulePathPrefixForConfigValues implements DataPatchInterface
 {
     /**
      * @var ModuleDataSetupInterface $setup
@@ -32,7 +32,7 @@ class UpdateModulePrefixInConfigPath implements DataPatchInterface
         $connection->update(
             $connection->getTableName('core_config_data'),
             [
-                'path' => new \Zend_Db_Expr('REGEXP_REPLACE(path, "^[a-z]+_dropday/", "dmirud_dropday/")')
+                'path' => new \Zend_Db_Expr('REGEXP_REPLACE(path, "^[a-z]+_dropday/", "radworks_dropday/")')
             ],
             ['path LIKE ?' => '%_dropday/%']
         );

@@ -1,13 +1,13 @@
 <?php
 declare(strict_types=1);
 
-namespace DmiRud\Dropday\Ui\Component\Listing\Column\DropDayExport;
+namespace RadWorks\Dropday\Ui\Component\Listing\Column\DropDayExport;
 
 use Magento\Framework\View\Element\UiComponent\ContextInterface;
 use Magento\Framework\View\Element\UiComponentFactory;
 use Magento\Sales\Api\OrderRepositoryInterface;
 use Magento\Ui\Component\Listing\Columns\Column;
-use DmiRud\Dropday\Model\Config;
+use RadWorks\Dropday\Model\Config;
 
 /**
  * Renders order export status grid column

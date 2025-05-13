@@ -8,7 +8,7 @@
                 <field id="enabled" type="select" sortOrder="10" showInDefault="1" translate="label">
                     <label>Enabled</label>
                     <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
-                    <config_path>dmirud_dropday/order_export/enabled</config_path>
+                    <config_path>radworks_dropday/order_export/enabled</config_path>
                     <depends>
                         <field id="*/order_automation/enabled">1</field>
                     </depends>
@@ -23,16 +23,16 @@
                     </comment>
                     <frontend_class>required-entry validate-digits validate-digits-range digits-range-0-9999
                     </frontend_class>
-                    <config_path>dmirud_dropday/order_export/delay</config_path>
+                    <config_path>radworks_dropday/order_export/delay</config_path>
                 </field>
                 <field id="rules" translate="label" sortOrder="30" showInDefault="1" canRestore="1">
                     <label>Export Rules</label>
                     <comment>
                         <![CDATA[Orders compliant with these rules will be marked for the DropDay export.]]>
                     </comment>
-                    <frontend_model>DmiRud\Dropday\Block\Adminhtml\Form\Field\ExportRules</frontend_model>
+                    <frontend_model>RadWorks\Dropday\Block\Adminhtml\Form\Field\ExportRules</frontend_model>
                     <backend_model>Magento\Config\Model\Config\Backend\Serialized\ArraySerialized</backend_model>
-                    <config_path>dmirud_dropday/order_export/rules</config_path>
+                    <config_path>radworks_dropday/order_export/rules</config_path>
                 </field>
             </group>
         </section>

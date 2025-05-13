@@ -2,8 +2,8 @@
 <config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
         xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Cron:etc/crontab.xsd">
     <group id="default">
-        <job name="dmirud_dropday_export_orders" instance="DmiRud\Dropday\Cron\ExportOrders" method="execute">
-            <config_path>crontab/default/jobs/dmirud_dropday_export_orders/schedule/cron_expr</config_path>
+        <job name="radworks_dropday_export_orders" instance="RadWorks\Dropday\Cron\ExportOrders" method="execute">
+            <config_path>crontab/default/jobs/radworks_dropday_export_orders/schedule/cron_expr</config_path>
         </job>
     </group>
 </config>

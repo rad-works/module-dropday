@@ -1,11 +1,11 @@
 <?php
 declare(strict_types=1);
 
-namespace DmiRud\Dropday\Cron;
+namespace RadWorks\Dropday\Cron;
 
 use Psr\Log\LoggerInterface;
-use DmiRud\Dropday\Model\Config;
-use DmiRud\Dropday\Model\Export\OrderService;
+use RadWorks\Dropday\Model\Config;
+use RadWorks\Dropday\Model\Export\OrderService;
 
 /**
  * Runs orders exporting to DropDay API

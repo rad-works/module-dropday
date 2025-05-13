@@ -1,13 +1,13 @@
 <?php
 declare(strict_types=1);
 
-namespace DmiRud\Dropday\Observer;
+namespace RadWorks\Dropday\Observer;
 
 use Magento\Framework\Event\Observer;
 use Magento\Framework\Event\ObserverInterface;
 use Magento\Sales\Model\Order;
-use DmiRud\Dropday\Model\Config;
-use DmiRud\Dropday\Model\Export\StatusProvider;
+use RadWorks\Dropday\Model\Config;
+use RadWorks\Dropday\Model\Export\StatusProvider;
 
 /**
  * Update export status based on order status.

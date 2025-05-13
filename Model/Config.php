@@ -1,7 +1,7 @@
 <?php
 declare(strict_types=1);
 
-namespace DmiRud\Dropday\Model;
+namespace RadWorks\Dropday\Model;
 
 use Dropday\OrderAutomation\Helper\Data;
 use Magento\Framework\App\Config\ScopeConfigInterface;
@@ -17,9 +17,9 @@ class Config
     /**
      * Path or of the config value
      */
-    private const XML_PATH_EXPORT_DELAY = 'dmirud_dropday/order_export/delay';
-    private const XML_PATH_EXPORT_ENABLED = 'dmirud_dropday/order_export/enabled';
-    private const XML_PATH_EXPORT_RULES = 'dmirud_dropday/order_export/rules';
+    private const XML_PATH_EXPORT_DELAY = 'radworks_dropday/order_export/delay';
+    private const XML_PATH_EXPORT_ENABLED = 'radworks_dropday/order_export/enabled';
+    private const XML_PATH_EXPORT_RULES = 'radworks_dropday/order_export/rules';
 
     /**
      * Order table  additional fields

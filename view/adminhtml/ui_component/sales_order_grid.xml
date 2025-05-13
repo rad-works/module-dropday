@@ -15,7 +15,7 @@
     </listingToolbar>
     <columns name="sales_order_columns">
         <column name="dropday_order_export_status"
-                class="DmiRud\Dropday\Ui\Component\Listing\Column\DropDayExport\Status" sortOrder="1000">
+                class="RadWorks\Dropday\Ui\Component\Listing\Column\DropDayExport\Status" sortOrder="1000">
             <settings>
                 <label translate="true">Dropday Export Status</label>
                 <visible>true</visible>
