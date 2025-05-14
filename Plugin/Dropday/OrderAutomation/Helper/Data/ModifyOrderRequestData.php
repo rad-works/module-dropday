@@ -8,7 +8,7 @@ use Magento\Catalog\Api\Data\ProductInterface;
 use Magento\Catalog\Api\ProductRepositoryInterface;
 use Magento\Framework\Exception\NoSuchEntityException;
 use Magento\Sales\Model\Order;
-use RadWorks\Dropday\Plugin\Dropday\OrderAutomation\Model\OrderAdditionalDataInterface;
+use RadWorks\Dropday\Model\Request\OrderAdditionalDataInterface;
 
 /**
  * Customize API request params:

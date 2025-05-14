@@ -4,6 +4,7 @@
     <module name="RadWorks_Dropday">
         <sequence>
             <module name="Dropday_OrderAutomation"/>
+            <module name="Swissup_CheckoutFields"/>
         </sequence>
     </module>
 </config>

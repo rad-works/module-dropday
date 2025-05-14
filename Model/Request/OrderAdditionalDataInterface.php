@@ -1,7 +1,7 @@
 <?php
 declare(strict_types=1);
 
-namespace RadWorks\Dropday\Plugin\Dropday\OrderAutomation\Model;
+namespace RadWorks\Dropday\Model\Request;
 
 use Magento\Sales\Api\Data\OrderInterface;
 
