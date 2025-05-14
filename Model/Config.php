@@ -36,6 +36,8 @@ class Config
      * Optional field name in the form
      */
     public const FIELD_NAME_PAYMENT = 'payment_method';
+    public const FIELD_NAME_SWISSUP_CHECKOUT_FIELD = 'siwssup_checkout_field';
+    public const FIELD_NAME_ADDITIONAL_VARIABLE_NAME = 'additional_variable_name';
     public const FIELD_NAME_STATUS = 'order_status';
 
     public function __construct(
@@ -77,7 +79,7 @@ class Config
     }
 
     /**
-     * Get states that allows order to be exported.
+     * Get states that allow order to be exported.
      *
      * @return int[]
      */
@@ -94,16 +96,29 @@ class Config
     public function getExportRules(): array
     {
         $rules = [];
-        try {
-            $rows = $this->serializer->unserialize($this->scopeConfig->getValue(self::XML_PATH_EXPORT_RULES));
-            foreach ($rows ?: [] as $row) {
-                [self::FIELD_NAME_PAYMENT => $index, self::FIELD_NAME_STATUS => $value] = $row;
-                $rules[$index] = $value;
-            }
-        } catch (\InvalidArgumentException) {
-            return $rules;
+
+        foreach ($this->getArrayValue(self::XML_PATH_EXPORT_RULES) as $row) {
+            [self::FIELD_NAME_PAYMENT => $index, self::FIELD_NAME_STATUS => $value] = $row;
+            $rules[$index] = $value;
         }
 
         return $rules;
+    }
+
+    /**
+     * Get config array value
+     *
+     * @param string $path
+     * @return array
+     */
+    public function getArrayValue(string $path): array
+    {
+        try {
+            $result = $this->serializer->unserialize($this->scopeConfig->getValue($path));
+        } catch (\InvalidArgumentException) {
+            return [];
+        }
+
+        return is_array($result) ? $result : [];
     }
 }

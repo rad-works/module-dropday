@@ -34,6 +34,15 @@
                     <backend_model>Magento\Config\Model\Config\Backend\Serialized\ArraySerialized</backend_model>
                     <config_path>radworks_dropday/order_export/rules</config_path>
                 </field>
+                <field id="swissup_checkout_fields" translate="label" sortOrder="30" showInDefault="1" canRestore="1">
+                    <label>Swissup Checkout Fields</label>
+                    <comment>
+                        <![CDATA[Export additional fields added with checkout fields.]]>
+                    </comment>
+                    <frontend_model>RadWorks\Dropday\Block\Adminhtml\Form\Field\SwissupCheckoutFields</frontend_model>
+                    <backend_model>Magento\Config\Model\Config\Backend\Serialized\ArraySerialized</backend_model>
+                    <config_path>radworks_dropday/order_export/swissup_checkout_fields</config_path>
+                </field>
             </group>
         </section>
     </system>

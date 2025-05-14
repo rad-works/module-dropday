@@ -8,13 +8,14 @@ use Magento\Catalog\Api\Data\ProductInterface;
 use Magento\Catalog\Api\ProductRepositoryInterface;
 use Magento\Framework\Exception\NoSuchEntityException;
 use Magento\Sales\Model\Order;
+use RadWorks\Dropday\Plugin\Dropday\OrderAutomation\Model\OrderAdditionalDataInterface;
 
 /**
  * Customize API request params:
  * - (legacy customization) use cost instead of price
  * - replace configurable product data with the simple product data
  */
-class ModifyRequestParamData
+class ModifyOrderRequestData
 {
     /**
      * @var ProductRepositoryInterface $productRepository
@@ -22,11 +23,18 @@ class ModifyRequestParamData
     private ProductRepositoryInterface $productRepository;
 
     /**
-     * @param ProductRepositoryInterface $productRepository
+     * @var OrderAdditionalDataInterface $additionalParams
      */
-    public function __construct(ProductRepositoryInterface $productRepository)
+    private OrderAdditionalDataInterface $additionalParams;
+
+    /**
+     * @param ProductRepositoryInterface $productRepository
+     * @param OrderAdditionalDataInterface $additionalParams
+     */
+    public function __construct(ProductRepositoryInterface $productRepository, OrderAdditionalDataInterface $additionalParams)
     {
         $this->productRepository = $productRepository;
+        $this->additionalParams = $additionalParams;
     }
 
     /**
@@ -68,7 +76,7 @@ class ModifyRequestParamData
             }
         }
 
-        return $result;
+        return array_merge($result, $this->additionalParams->getParams($order));
     }
 
     /**
